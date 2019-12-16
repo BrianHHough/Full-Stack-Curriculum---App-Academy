@@ -1,7 +1,24 @@
 # App Academy's "Full Stack Curriculum"
-This repository includes all of the components of App Academy's full-stack developer curriculum which I have completed. I will update this repository as I complete the coursework.
+This repository includes all of the components of App Academy's Full-Stack curriculum which builds working proficiency in the following:
+* MERN tech stack (MongoDB, Express, React, and Node.js)
+* JavaScript
+* Ruby on Rails
+* SQL 
+* Docker
+
+Coursework Completed by: `@BrianHHough` 👨‍💻 [Website](https://BrianHHough.com) 
+| 
+[Twitter](https://twitter.com/BrianHHough)
+|
+[Instagram](https://instagram.com/BrianHHough)
+|
+[LinkedIn](https://linkedin.com/in/BrianHHough)
 
 ## Part 1: Intro to Programming
+
+
+
+
 
 ## Part 2: Software Engineering Foundations
 
