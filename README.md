@@ -16,7 +16,10 @@ Coursework Completed by: `@BrianHHough` 👨‍💻 [Website](https://BrianHHoug
 
 ## Part 1: Intro to Programming
 
-
+### Numbers
+| # | Topic | Completed? |
+|:---:|:---:|:---:|
+| 1 | 💻 [Numbers Lecture 1] | 🌟 |
 
 
 
