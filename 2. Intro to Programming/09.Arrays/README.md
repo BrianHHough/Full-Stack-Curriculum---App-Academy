@@ -15,6 +15,8 @@ There are two methods:
   
   
   `i = 2`
+  
+  
   `puts foods[i]`
 
 
