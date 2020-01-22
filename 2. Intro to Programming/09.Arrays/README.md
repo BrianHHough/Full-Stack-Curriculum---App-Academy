@@ -12,6 +12,7 @@ print letters
 
 
 
+
 To find the number of things in an array, use length:
 
 letters = ["a", "b", "c", "d"]
