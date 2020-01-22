@@ -11,7 +11,7 @@ letters = ["a", "b", "c"]
 print letters 
 
 
-To find the number of things in an array, use length:
+To find the number of things in an array, use <b>length</b>:
 
 letters = ["a", "b", "c", "d"]
 
@@ -19,7 +19,7 @@ puts letters.length
 
 
 
-To get a single element of an array --> specify its index.
+To get a single element of an array --> specify its <b>index</b>.
 
 letters = ["a", "b", "c", "d"]
 
