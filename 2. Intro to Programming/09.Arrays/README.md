@@ -26,6 +26,7 @@ letters = ["a", "b", "c", "d"]
 puts letters[0]
 puts letters[1]
 
+<br />
 
 
 ## Lecture 2: How to manipulate arrays after the fact
