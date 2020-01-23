@@ -72,7 +72,7 @@ There are two methods:
 
 # Problems
 
-## Double the elements of an array
+## DOUBLE: Double the elements of an array
     def doubler(numbers)
         doubled_nums = []
         i = 0
@@ -88,7 +88,7 @@ There are two methods:
 
       end
 
-## Add an ! to the end of each string element in an array
+## EDIT EACH ELEMENT OF AN ARRAY: Add an ! to the end of each string element in an array
 
     def yell(words)
 
@@ -109,7 +109,7 @@ There are two methods:
       end
 
 
-## Take array and multiple every number with its index
+## MULTIPLY ARRAY ELEMENTS BY ITS INDEX: Take array and multiple every number with its index
 
     def element_times_index(numbers)
 
@@ -127,7 +127,7 @@ There are two methods:
     end
  
  
- ## take in a number max and return array of all even numbers from 0 to max
+ ## RETURN ALL NUMS: Take in a number max and return array of all even numbers from 0 to max
  
      def even_nums(max)
 
@@ -155,7 +155,7 @@ There are two methods:
     print even_nums(5)  # => [0, 2, 4]
 
 
-## Return all numbers between a min and max, inclusive
+## RANGE: Return all numbers between a min and max, inclusive
 
     def range(min, max)
 
@@ -176,6 +176,30 @@ There are two methods:
       puts
       print range(13, 20) # => [13, 14, 15, 16, 17, 18, 19, 20]
   
+  ## ODD RANGE: Return all numbers between a min and max that are odd
+  
+      def odd_range(min, max)
+      odds = []
+
+
+      i = min
+      while i <= max
+        if i % 2 == 1 # if you divide odd numbers by 2, R1
+        # you can also do this:
+        # if i % 2 != 0  //// means not divisible by even
+        odds << i
+        end
+
+        i += 1
+      end
+
+
+      return odds
+    end
+
+    print odd_range(11, 18) # => [11, 13, 15, 17]
+    puts
+    print odd_range(3, 7)   # => [3, 5, 7]
   
 
 
