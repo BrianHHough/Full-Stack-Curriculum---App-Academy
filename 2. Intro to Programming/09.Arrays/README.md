@@ -246,4 +246,60 @@ There are two methods:
     print first_half(["a", "b", "c", "d", "e"])          # => ["a", "b", "c"]
 
 
+## FACTORS OF: Returns array of positive numbers less than or equal to the number that can divide that number
+
+    def factors_of(num)
+      factors = []
+
+      i = 1
+      while i <= num
+        # if i is a factor of num (if num divisible by i)
+        if num % i == 0 # if num mod i divisible by zero, no remainder
+          factors << i
+        end
+
+        i += 1
+      end
+
+      return factors
+    end
+
+    print factors_of(3)   # => [1, 3]
+    puts
+    print factors_of(4)   # => [1, 2, 4]
+    puts
+    print factors_of(8)   # => [1, 2, 4, 8]
+    puts
+    print factors_of(9)   # => [1, 3, 9]
+    puts
+    print factors_of(16)  # => [1, 2, 4, 8, 16]
+
+
+## SELECT ODDS: return new array containing the odd numbers of the original array
+
+    def select_odds(numbers)
+
+        odds = [] # name your new array
+
+        i = 0 #iterating left to right through array
+        while i < numbers.length # numbers is initial array
+          num = numbers[i]
+
+          if num % 2 == 1 #odd always has R1
+            odds << num      
+          end 
+
+          i += 1 # go through every number of i
+        end
+
+        return odds
+
+      end
+
+      print select_odds([13, 4, 3, 7, 6, 11]) # => [13, 3, 7, 11]
+      puts
+      print select_odds([2, 4, 6])            # => []
+
+
+
 
