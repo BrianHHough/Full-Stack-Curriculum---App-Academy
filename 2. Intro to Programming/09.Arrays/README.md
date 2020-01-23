@@ -48,6 +48,9 @@ puts letters[1]
 
 `print names`
 
+<br />
+<br />
+<br />
 
 ## Lecture 3: How to Iterate through an array
 
