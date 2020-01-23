@@ -70,6 +70,42 @@ There are two methods:
 <br />
 <br />
 
-Test
+# Problems
+
+## Double the elements of an array
+    def doubler(numbers)
+        doubled_nums = []
+        i = 0
+        while i < numbers.length
+          old_ele = numbers[i]
+          new_ele = old_ele * 2
+          doubled_nums << new_ele
+
+          i += 1
+        end
+
+        return doubled_nums
+
+      end
+
+## Add an ! to the end of each string element in an array
+
+    def yell(words)
+
+        yelled = []        # placeholder for list of yelled words to go
+
+        i = 0
+
+        while i < words.length       # iterate this loop through the full length of words
+          word = words[i]
+          yelled_word = word + "!"
+          yelled << yelled_word
+
+          i += 1
+        end
+
+        return yelled
+
+      end
 
 
