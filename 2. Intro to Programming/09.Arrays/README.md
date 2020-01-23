@@ -109,3 +109,73 @@ There are two methods:
       end
 
 
+## Take array and multiple every number with its index
+
+    def element_times_index(numbers)
+
+        new_numbers = [] # set equal to empty array
+
+        i = 0 # iterate through all elements of array
+
+        while i < numbers.length
+        new_numbers << numbers[i] * i
+
+        i += 1
+      end
+
+        return new_numbers
+    end
+ 
+ 
+ ## take in a number max and return array of all even numbers from 0 to max
+ 
+     def even_nums(max)
+
+        array = []
+
+        i = 0
+
+        while i <= max
+        # if i is an even number, then put it in array
+
+        if i % 2 == 0 # every even number divisible by 2
+
+          array << i
+        end
+
+        i += 1
+      end
+
+        return array
+
+    end
+
+    print even_nums(10) # => [0, 2, 4, 6, 8, 10]
+    puts
+    print even_nums(5)  # => [0, 2, 4]
+
+
+## Return all numbers between a min and max, inclusive
+
+    def range(min, max)
+
+        nums = [] # you don't put this in loop, b/c then you'd repeat it every time
+
+        i = min # min is 2, so i is set to 2
+        while i <= max
+          nums << i # need to shovel i into the nums array
+
+          i += 1
+        end
+
+        return nums
+
+      end
+
+      print range(2, 7)   # => [2, 3, 4, 5, 6, 7]
+      puts
+      print range(13, 20) # => [13, 14, 15, 16, 17, 18, 19, 20]
+  
+  
+
+
