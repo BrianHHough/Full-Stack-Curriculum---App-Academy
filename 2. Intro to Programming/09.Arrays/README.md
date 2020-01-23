@@ -301,5 +301,80 @@ There are two methods:
       print select_odds([2, 4, 6])            # => []
 
 
+## SELECT LONG WORDS: Return new array with words of the original array that are longer than 4 characters
 
+    def select_long_words(words)
+      long_words = []
+
+      i = 0
+      while i < words.length
+        word = words[i]
+        # if string has length greater than 4
+
+
+        if word.length > 4
+          long_words << word
+        end
+
+
+      i += 1
+      end
+
+      return long_words
+
+    end
+
+    print select_long_words(["what", "are", "we", "eating", "for", "dinner"]) # => ["eating", "dinner"]
+    puts
+    print select_long_words(["keep", "coding"])                               # => ["coding"]
+
+
+
+## SUM ELEMENTS: return array containing the results of adding together corresponding elements of the original arrays
+
+    def sum_elements(arr1, arr2)
+      new_arr = []
+
+        i = 0
+
+        while i < arr1.length
+          el1 = arr1[i]
+          el2 = arr2[i]
+          new_el = el1 + el2
+          new_arr << new_el
+
+          i += 1
+        end
+
+      return new_arr
+
+    end
+
+    print sum_elements([7, 4, 4], [3, 2, 11])                            # => [10, 6, 15]
+    puts
+    print sum_elements(["cat", "pizza", "boot"], ["dog", "pie", "camp"]) # => ["catdog", "pizzapie", "bootcamp"]
+
+
+## FIZZ BUZZ: Return array containing all numbers greater than 0 and less than max that are divisible by 4 or 6 (not both)
+
+def fizz_buzz(max)
+	nums = []
+  	
+  	i = 0 #counter
+ 	 while i < max
+  		if (i % 4 == 0 || i % 6 == 0) && !(i %4 == 0 && i % 6 == 0)# but don't want numbers divisible by both
+          
+       nums << i
+     end
+    i += 1
+    end 
+  
+  return nums
+  
+  
+end
+
+print fizz_buzz(20) # => [4, 6, 8, 16, 18]
+puts
+print fizz_buzz(15) # => [4, 6, 8]
 
