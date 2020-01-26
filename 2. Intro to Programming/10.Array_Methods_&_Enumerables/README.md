@@ -189,7 +189,7 @@ The negative number corresponds to items at the end of the array/string:
 
 ## Lecture 5: `.split` & `.join` Array Methods
 
-### `string.split` -- you can only use it on a string (can't do array.split)
+### `string.split` -- you can only use it to split/break a string (can't do array.split)
 
 If you have a sentence string and you want to isolate every element in the string, you'll use `string.split`. This evaluates to an array of words b/c you cut at each space in the sentence.
 
@@ -208,7 +208,7 @@ But if you split it at the "y", the following evaluates to: `["follow the ", "el
         puts
 
 
-If you want to isolate a certain string element, create a variable (like words) and set it equal to `str.split(" ")` so it cuts around the words (to split them), and then make it `puts words[index_number]` to return a single element, like so:
+If you want to isolate a certain string element, create a variable (like words) and set it equal to `str.split(" ")` so it cuts around the words (to split them), and then make it `puts words[index_number]` to return a single element, like so below. This returns `yellow`.
 
         str = "follow the yellow brick road"
 
@@ -216,8 +216,39 @@ If you want to isolate a certain string element, create a variable (like words) 
         puts words[2]
 
 
+If you wanted to take a string and print out every element of that string, you'd create a variable chars and make it equal to a str.split with the substring of an empty string `("")` -- makes a cut after every element of that string:
 
-### array.join
+        str = "follow the yellow brick road"
+        chars = str.split("")
+        print chars
+        puts
 
+
+### array.join -- this is how we join array elements together
+
+If you want to take a number of array elements and combine them, define how you do this in the `(" ")` area. The following will return: `hello world how are you`.
+
+        arr = ["hello", "world", "how", "are", "you"]
+        puts arr.join(" ") # this takes the substring " " (the space) and inserts it next to every adjacent pair of words
+
+For example, let's make the .join substring "HI". The output here would be: `helloHIworldHIhowHIareHIyou`.
+
+        arr = ["hello", "world", "how", "are", "you"]
+        puts arr.join("HI")
+
+
+### Combination of both methods: replace an element (split) with another element (join)
+
+If you wanted to remove all of the l's, this is what you'd do below. This would return: `["fo", "", "ow the ye", "", "ow brick road"]`
+
+        str = "follow the yellow brick road"
+        print str.split("l")
+        puts
+
+When you then add in `.join` this will take all the l's and allow you to replace them with something else, which in this case below would turn the l's to Z's and return: `foZZow the yeZZow brick road`.
+
+        str = "follow the yellow brick road"
+        print str.split("l").join("Z")
+        puts
 
 
