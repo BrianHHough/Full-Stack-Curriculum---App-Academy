@@ -16,14 +16,11 @@ Coursework Completed by: `@BrianHHough` 👨‍💻 [Website](https://BrianHHoug
 
 ## Part 1: Intro to Programming
 
-### Numbers
-| # | Topic | Completed? |
-|:---:|:---:|:---:|
-| 1 | 💻 [Numbers Lecture 1] | 🌟 |
-
-
+## Numbers
 
 ## Part 2: Software Engineering Foundations
+
+[10. Array Methods & Enumerables](https://github.com/BrianHHough/Full-Stack-Curriculum---App-Academy/tree/master/2.%20Intro%20to%20Programming/10.Array_Methods_%26_Enumerables)
 
 ## Part 3: Ruby
 
