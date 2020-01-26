@@ -189,4 +189,35 @@ The negative number corresponds to items at the end of the array/string:
 
 ## Lecture 5: `.split` & `.join` Array Methods
 
+### `string.split` -- you can only use it on a string (can't do array.split)
+
+If you have a sentence string and you want to isolate every element in the string, you'll use `string.split`. This evaluates to an array of words b/c you cut at each space in the sentence.
+
+The following evaluates to: `["follow", "the", "yellow", "brick", "road"]`. Each element of the array will be the word b/c you chose to split on the space character -- cut wherever is a space and make everything become elements of the array.
+
+        str = "follow the yellow brick road"
+
+        print str.split(" ")
+        puts # evaluates to an array - you chose to split on the space character; cut whereever there is space
+
+But if you split it at the "y", the following evaluates to: `["follow the ", "ellow brick road"]`. There is only one y, so it returns two elements--cut to the left of y and cut to the right of y:
+
+        str = "follow the yellow brick road"
+
+        print str.split("y")
+        puts
+
+
+If you want to isolate a certain string element, create a variable (like words) and set it equal to `str.split(" ")` so it cuts around the words (to split them), and then make it `puts words[index_number]` to return a single element, like so:
+
+        str = "follow the yellow brick road"
+
+        words = str.split(" ")
+        puts words[2]
+
+
+
+### array.join
+
+
 
