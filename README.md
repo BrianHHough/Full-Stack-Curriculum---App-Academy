@@ -20,6 +20,10 @@ Coursework Completed by: `@BrianHHough` 👨‍💻 [Website](https://BrianHHoug
 
 ## Part 2: Software Engineering Foundations
 
+[02. Numbers](https://github.com/BrianHHough/Full-Stack-Curriculum---App-Academy/tree/master/2.%20Intro%20to%20Programming/02.Numbers)
+
+[03. Booleans](https://github.com/BrianHHough/Full-Stack-Curriculum---App-Academy/tree/master/2.%20Intro%20to%20Programming/03.Booleans)
+
 [09. Arrays](https://github.com/BrianHHough/Full-Stack-Curriculum---App-Academy/tree/master/2.%20Intro%20to%20Programming/09.Arrays)
 
 [10. Array Methods & Enumerables](https://github.com/BrianHHough/Full-Stack-Curriculum---App-Academy/tree/master/2.%20Intro%20to%20Programming/10.Array_Methods_%26_Enumerables)
