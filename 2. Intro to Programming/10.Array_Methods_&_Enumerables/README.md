@@ -69,3 +69,67 @@ Using <b>`arr.shift`</b>, evaluates to the first element: `Vanessa` on the top r
 
 
 
+## Lecture 2: Index & Include Methods
+
+Can be used for both arrays and strings.
+
+### Using <b>`array/string.index(ele)`</b> to evaluate to the index where ele is found(return the element's inde)x
+
+        arr = ["SF", "NY", "LA"]
+        puts arr.index("LA") # this will return 2
+        
+If you're looking for the index of an element that isn't in the array, it won't return anything.
+
+You can also use `.index` to find where a certain substring of a string begins after a certain point. The below will evaluate to `1`, meaning you can begin to find the substring `ello` in `hello` starting at index 1.
+
+        str = "hello"
+        puts str.index("ello")
+
+
+
+### Using <b>`array/string.include?(ele)`</b> to evaluate to a boolean indicating if ele is found
+
+If you want to use the include pattern, you're basically asing a True/False question of if something is in the array or string.
+
+        arr = ["SF", "NY", "LA"]
+        puts arr.include?("NJ") # returns false
+
+If you want to check a string and see if a letter is in a string, you can do that like this below, which will evaluate to `true`. Ruby is case sensitive so looking for "E" would evaluate as `false`.
+
+        str = "hello"
+        puts str.include?("e")
+       
+Include is also useful if you're looking for a substring inside of a string. The following will evaluate as `true`.
+
+        str = "hello"
+        puts str.include?("ello")
+
+
+
+## Lecture 3: Array Methods II
+
+To reverse the order that the array items are printed, we'll use <b>`arr/string.reverse`</b> like this:
+
+        arr = [1, 2, 3, 4]
+        print arr.reverse
+        puts
+
+
+or:
+
+        str = "hello"
+        puts str.reverse
+        
+
+The ! means you're modifying the existing variable in place. Using <b>`array/string.reverse!`</b> will then cause you to print the reverse of the array:
+
+        arr = [1, 2, 3, 4]
+        print arr
+        puts
+        arr.reverse!
+        print arr
+        puts 
+
+Example of application: if we want to check if a word is a palindrome (it's the same when spelled forwards and backwards)
+
+
