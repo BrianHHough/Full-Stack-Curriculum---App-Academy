@@ -106,7 +106,7 @@ Include is also useful if you're looking for a substring inside of a string. The
 
 
 
-## Lecture 3: Array Methods II -- `.reverse` & `.reverse!`
+## Lecture 3: `.reverse` & `.reverse!` Array Methods
 
 ### <b>`arr/string.reverse`</b>
 
@@ -144,7 +144,7 @@ The ! means you're modifying the existing variable in place. Using <b>`array/str
 
 
 
-## Lecture 4: Array Methods III -- Range Slicing Lecture
+## Lecture 4: Range Slicing Array Methods
 
 How to slice arrays and strings in Ruby.
 
@@ -184,5 +184,9 @@ The negative number corresponds to items at the end of the array/string:
         str = "bootcamp"
         print str[1..-2]
         puts # Returns 'ootcam'
+
+
+
+## Lecture 5: `.split` & `.join` Array Methods
 
 
