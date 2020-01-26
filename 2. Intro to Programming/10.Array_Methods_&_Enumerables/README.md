@@ -143,6 +143,46 @@ The ! means you're modifying the existing variable in place. Using <b>`array/str
         puts is_palindrome("hello") # false - add puts to your method calls
 
 
+
 ## Lecture 4: Array Methods III -- Range Slicing Lecture
-How to slice arrays and strings in Ruby
+
+How to slice arrays and strings in Ruby.
+
+To return the array element in x index position:
+
+        arr = ["a", "b", "c", "d", "e"]
+        print arr[1]
+        puts # returns b
+
+
+To return a slice of the array, specify a reange of indices. Return all elements b through d, inclusive with TWO dots:
+
+        arr = ["a", "b", "c", "d", "e"]
+        print arr[1..3] # from the array, take items from 1 to 3
+        puts
+
+You can also use the slice method for exclusive lists (not including the first/last items with THREE dots:
+
+        arr = ["a", "b", "c", "d", "e"]
+        print arr[1...3] # from the array, take items from 1 to 3
+        puts # returns '["b", "c", "d"]'
+
+or:
+
+        str = "bootcamp"
+        print str[1...3] # from the array, take items from 1 to 3
+        puts # returns 'oo'
+
+You can use negative syntax to go in reverse order of indexing:
+
+        str = "bootcamp"
+        print str[-2]
+        puts # Returns 'm'
+
+The negative number corresponds to items at the end of the array/string:
+
+        str = "bootcamp"
+        print str[1..-2]
+        puts # Returns 'ootcam'
+
 
