@@ -254,17 +254,73 @@ When you then add in `.join` this will take all the l's and allow you to replace
 
 # Lecture 6: Enumerables Part I
 
-Group of methods, called Enumerables, let us iterate in a cleaner way. Right now, we have three elements to a loop:
+Group of methods, called Enumerables, let us iterate in a cleaner way. Right now, we have three elements to a loop, which is below. This is our old method below, which returns `Jan Feb Mar Apr`.
 
         months = ["Jan", "Feb", "Mar", "Apr"]
 
-        i = 0                           # THE COUNTER
-        while i < months.length         # THE CONDITIONAL
+        i = 0                                   # THE COUNTER
+        while i < months.length                 # THE CONDITIONAL
             month = months[i]
             puts month
 
-            i += 1                      # THE INCRIMENTING COMPONENT
+            i += 1                              # THE INCRIMENTING COMPONENT
         end
+
+### Block Parameters -- iterate if you only want to run a single line of code in your block
+
+Our new method, called <b>`Enumerables`</b>, looks like this below. It takes in a block of code...rather than a normal parameter like a number like we did before, we take in a `block parameter`. This `block parameter` replaces the `while loop` from before into a single line of code and we get the same output as before: `Jan Feb Mar Apr`
+
+It automatically iterates every element of the array:
+
+        months = ["Jan", "Feb", "Mar", "Apr"]
+
+        months.each { |month| puts month }      # Each is a method we're calling on each element of the array
+                                                # The block of code is specifying a parameter, |month| - iterates from one element to the next
+                                                
+You can also make the paremeter |ele| and it will perform the same:
+
+        months = ["Jan", "Feb", "Mar", "Apr"]
+
+        months.each { |ele| puts ele }
+
+### Multiline Block -- use if you have multiple lines in your code that you want to run in your block
+
+This will separate each element with a line.
+
+        months = ["Jan", "Feb", "Mar", "Apr"]
+
+        months.each do |ele| # do block parameter -- keyword do, operates like 'while'
+            puts ele
+            puts "----" # to separate each outputted element
+        end
+
+To print out each element of a sentence string, `h e l l o  w o r l d`, you'd use a do block and specify `do` in your block parameter:
+
+        sentence = "hello world"
+
+        sentence.each_char do |char|
+            puts char
+        end 
+
+### `idx` - return every element in an array/string with its corresponding index
+
+But in the above, there's no notion of an index as we iterate in the above, so let's go back to our array example. We can use `idx` to return each element in an <b>array</b> with its corresponding index like below:
+
+        months.each_with_index do |ele, idx| # do block parameter -- keyword do, operates like 'while'
+            puts ele
+            puts idx
+            puts "----" # to separate each outputted element
+        end
+
+If you want to do something analogous for a <b>string</b>, 
+
+        sentence = "hello world"
+
+        sentence.each_char.with_index do |char, idx|
+            puts char
+            puts idx
+            puts "----"
+         end 
 
 
 
