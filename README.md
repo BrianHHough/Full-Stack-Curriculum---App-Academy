@@ -21,6 +21,7 @@ Coursework Completed by: `@BrianHHough` 👨‍💻 [Website](https://BrianHHoug
 ## Part 2: Software Engineering Foundations
 
 [09. Arrays](https://github.com/BrianHHough/Full-Stack-Curriculum---App-Academy/tree/master/2.%20Intro%20to%20Programming/09.Arrays)
+
 [10. Array Methods & Enumerables](https://github.com/BrianHHough/Full-Stack-Curriculum---App-Academy/tree/master/2.%20Intro%20to%20Programming/10.Array_Methods_%26_Enumerables)
 
 ## Part 3: Ruby
