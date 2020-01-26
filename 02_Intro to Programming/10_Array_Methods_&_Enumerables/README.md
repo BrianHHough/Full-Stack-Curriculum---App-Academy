@@ -1,7 +1,7 @@
 # Array Methods & Enumerables
 
 
-## Lecture 1: Array Manipulation Methods
+# Lecture 1: Array Manipulation Methods
 
 One of the ways we can add elements is via the <b>shovel method</b> like so:
 
@@ -69,7 +69,7 @@ Using <b>`arr.shift`</b>, evaluates to the first element: `Vanessa` on the top r
 
 
 
-## Lecture 2: Index & Include Methods
+# Lecture 2: Index & Include Methods
 
 Can be used for both arrays and strings.
 
@@ -106,7 +106,7 @@ Include is also useful if you're looking for a substring inside of a string. The
 
 
 
-## Lecture 3: `.reverse` & `.reverse!` Array Methods
+# Lecture 3: `.reverse` & `.reverse!` Array Methods
 
 ### <b>`arr/string.reverse`</b>
 
@@ -144,7 +144,7 @@ The ! means you're modifying the existing variable in place. Using <b>`array/str
 
 
 
-## Lecture 4: Range Slicing Array Methods
+# Lecture 4: Range Slicing Array Methods
 
 How to slice arrays and strings in Ruby.
 
@@ -187,7 +187,7 @@ The negative number corresponds to items at the end of the array/string:
 
 
 
-## Lecture 5: `.split` & `.join` Array Methods
+# Lecture 5: `.split` & `.join` Array Methods
 
 ### `string.split` -- you can only use it to split/break a string (can't do array.split)
 
@@ -250,5 +250,21 @@ When you then add in `.join` this will take all the l's and allow you to replace
         str = "follow the yellow brick road"
         print str.split("l").join("Z")
         puts
+
+
+# Lecture 6: Enumerables Part I
+
+Group of methods, called Enumerables, let us iterate in a cleaner way. Right now, we have three elements to a loop:
+
+        months = ["Jan", "Feb", "Mar", "Apr"]
+
+        i = 0                           # THE COUNTER
+        while i < months.length         # THE CONDITIONAL
+            month = months[i]
+            puts month
+
+            i += 1                      # THE INCRIMENTING COMPONENT
+        end
+
 
 
