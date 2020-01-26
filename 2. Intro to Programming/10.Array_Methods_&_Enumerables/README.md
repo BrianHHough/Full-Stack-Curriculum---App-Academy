@@ -106,7 +106,9 @@ Include is also useful if you're looking for a substring inside of a string. The
 
 
 
-## Lecture 3: Array Methods II
+## Lecture 3: Array Methods II -- `.reverse` & `.reverse!`
+
+### <b>`arr/string.reverse`</b>
 
 To reverse the order that the array items are printed, we'll use <b>`arr/string.reverse`</b> like this:
 
@@ -120,6 +122,7 @@ or:
         str = "hello"
         puts str.reverse
         
+### <b>`array/string.reverse!`</b>
 
 The ! means you're modifying the existing variable in place. Using <b>`array/string.reverse!`</b> will then cause you to print the reverse of the array:
 
@@ -130,6 +133,16 @@ The ! means you're modifying the existing variable in place. Using <b>`array/str
         print arr
         puts 
 
-Example of application: if we want to check if a word is a palindrome (it's the same when spelled forwards and backwards)
+<b>Example of application:</b> if we want to check if a word is a palindrome (it's the same when spelled forwards and backwards)
 
+        def is_palindrome(word)
+            return word == word.reverse
+        end
+
+        puts is_palindrome("madam") # true - add puts to your method calls
+        puts is_palindrome("hello") # false - add puts to your method calls
+
+
+## Lecture 4: Array Methods III -- Range Slicing Lecture
+How to slice arrays and strings in Ruby
 
