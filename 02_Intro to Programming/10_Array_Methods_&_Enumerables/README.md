@@ -252,7 +252,7 @@ When you then add in `.join` this will take all the l's and allow you to replace
         puts
 
 
-# Lecture 6: Enumerables Part I
+# Lecture 6: Enumerables Part I - More Efficient than While Loops for Arrays and Strings
 
 Group of methods, called Enumerables, let us iterate in a cleaner way. Right now, we have three elements to a loop, which is below. This is our old method below, which returns `Jan Feb Mar Apr`.
 
@@ -266,7 +266,7 @@ Group of methods, called Enumerables, let us iterate in a cleaner way. Right now
             i += 1                              # THE INCRIMENTING COMPONENT
         end
 
-### Block Parameters -- iterate if you only want to run a single line of code in your block
+## `Block Parameters` -- iterate if you only want to run a single line of code in your block
 
 Our new method, called <b>`Enumerables`</b>, looks like this below. It takes in a block of code...rather than a normal parameter like a number like we did before, we take in a `block parameter`. This `block parameter` replaces the `while loop` from before into a single line of code and we get the same output as before: `Jan Feb Mar Apr`
 
@@ -283,7 +283,7 @@ You can also make the paremeter |ele| and it will perform the same:
 
         months.each { |ele| puts ele }
 
-### Multiline Block -- use if you have multiple lines in your code that you want to run in your block
+## `Multiline Block` -- use if you have multiple lines in your code that you want to run in your block
 
 This will separate each element with a line.
 
@@ -302,7 +302,7 @@ To print out each element of a sentence string, `h e l l o  w o r l d`, you'd us
             puts char
         end 
 
-### `idx` - return every element in an array/string with its corresponding index
+## `idx` - return every element in an array/string with its corresponding index
 
 But in the above, there's no notion of an index as we iterate in the above, so let's go back to our array example. We can use `idx` to return each element in an <b>array</b> with its corresponding index like below:
 
@@ -321,6 +321,25 @@ If you want to do something analogous for a <b>string</b>,
             puts idx
             puts "----"
          end 
+
+
+# Lecture 7: Enumerables Part II - To iterate quickly through a range of numbers
+
+If you want to iterate all of the number from 1 to 5, you could do the following like we reviewed previously:
+
+        arr = [1,2,3,4,5]
+
+        # prints out every element of the array
+        arr.each { |ele| puts ele }                # THE BLOCK
+
+BUT...if you wanted to do the same for the elements between 1 and 100, you're not going to write out each element. That'd be insane...so let's clean up that syntax.
+
+Apply the dot <b>(two dots: ..)</b> method to the elements at the start and end of the array. This will return all numbers 1-10, inclusive.
+
+        # Cleaner code
+        (1..10).each { |num| puts num}      # Each takes in a block of code and iterate through
+
+Applying triple dots <b>(three dots: ...)</b> will make the range exclusive of the END and exclude the ending number.
 
 
 
