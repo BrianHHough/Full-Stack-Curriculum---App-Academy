@@ -342,6 +342,17 @@ Apply the dot <b>(two dots: ..)</b> method to the elements at the start and end 
 Applying triple dots <b>(three dots: ...)</b> will make the range exclusive of the END and exclude the ending number.
 
 
-# Lecture 8: Enumerables Part III - 
+# Lecture 8: Enumerables Part III - How to iterate a string/phrase with clean code
+
+Let's create a range and iterate through that range, not including the max 4 b/c of the 3 dots:
+`(0...4).each { |num| puts num}`
+
+If you want to print out hello four times, you'd put:
+`(0...4).each { puts "hello"}`
+OR
+`4.times { puts "hi"}`
+
+
+# Exercises
 
 
