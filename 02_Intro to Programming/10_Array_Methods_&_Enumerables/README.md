@@ -342,4 +342,6 @@ Apply the dot <b>(two dots: ..)</b> method to the elements at the start and end 
 Applying triple dots <b>(three dots: ...)</b> will make the range exclusive of the END and exclude the ending number.
 
 
+# Lecture 8: Enumerables Part III - 
+
 
