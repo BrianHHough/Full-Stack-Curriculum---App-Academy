@@ -355,4 +355,35 @@ OR
 
 # Exercises
 
+### Write a method `to_initials` that takes in a person's name string and returns a string representing their initials.
+
+Need to get the first character of their name --> split on the space
+
+        def to_initials(name)
+            parts = name.split(" ") # cuts where the space is
+            initials = "" # want to return some string data
+            parts.each { |part| initials += part[0] } # go in and grab the first position of each part; concatonate some initials with string[index 0]
+            return initials
+        end
+
+        puts to_initials('Kelvin Bridges')
+        puts to_initials('Michaela Yamamoto')
+
+
+### Write a method `first_in_array` that takes in an array and two elements, the method should return the element that appears earlier in the array.
+
+        def first_in_array(arr, el1, el2)
+            if arr.index(el1) < arr.index(el2) # if el1 comes first, return el1
+                return el1
+            else
+                return el2
+            end 
+        end 
+
+        puts first_in_array(["a", "b", "c", "d"], "d", "b"); # => "b"
+        puts first_in_array(["cat", "bird" ,"dog", "mouse" ], "dog", "mouse"); # => "dog"
+
+
+
+
 
