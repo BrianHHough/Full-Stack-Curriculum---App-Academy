@@ -353,6 +353,15 @@ OR
 `4.times { puts "hi"}`
 
 
+# Lecture 9: Nested Loops Lecture I
+
+Previously, we learned how to write loops as `while loops` or use the `each method` (aka enumerables). 
+
+
+
+
+
+
 # Exercises
 
 ### Write a method `to_initials` that takes in a person's name string and returns a string representing their initials.
