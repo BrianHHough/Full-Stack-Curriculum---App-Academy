@@ -18,7 +18,7 @@ Coursework Completed by: `@BrianHHough` 👨‍💻 [Website](https://BrianHHoug
 
 [#2: Numbers](https://github.com/BrianHHough/Full-Stack-Curriculum---App-Academy/tree/master/02_Intro%20to%20Programming/02_Numbers)
 
-[3: Booleans](https://github.com/BrianHHough/Full-Stack-Curriculum---App-Academy/tree/master/02_Intro%20to%20Programming/03_Booleans)
+[#3: Booleans](https://github.com/BrianHHough/Full-Stack-Curriculum---App-Academy/tree/master/02_Intro%20to%20Programming/03_Booleans)
 
 [#4: Booleans](https://github.com/BrianHHough/Full-Stack-Curriculum---App-Academy/tree/master/02_Intro%20to%20Programming/04_Strings)
 
@@ -30,9 +30,9 @@ Coursework Completed by: `@BrianHHough` 👨‍💻 [Website](https://BrianHHoug
 
 [#8: Loops](https://github.com/BrianHHough/Full-Stack-Curriculum---App-Academy/tree/master/02_Intro%20to%20Programming/08_Loops)
 
-[09. Arrays](https://github.com/BrianHHough/Full-Stack-Curriculum---App-Academy/tree/master/02_Intro%20to%20Programming/09_Arrays)
+[#9: Arrays](https://github.com/BrianHHough/Full-Stack-Curriculum---App-Academy/tree/master/02_Intro%20to%20Programming/09_Arrays)
 
-[10. Array Methods & Enumerables](https://github.com/BrianHHough/Full-Stack-Curriculum---App-Academy/tree/master/02_Intro%20to%20Programming/10_Array_Methods_%26_Enumerables)
+[#10: Array Methods & Enumerables](https://github.com/BrianHHough/Full-Stack-Curriculum---App-Academy/tree/master/02_Intro%20to%20Programming/10_Array_Methods_%26_Enumerables)
 
 
 
