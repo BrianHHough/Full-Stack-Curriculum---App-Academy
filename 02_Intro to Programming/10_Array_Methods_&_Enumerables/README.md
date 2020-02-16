@@ -514,6 +514,46 @@ This outputs to:
         2  3
         ----------
 
+### So why does this `if statement` actually get rid of duplicate outputs?
+
+It's because the indices correspond to the same array.
+
+If indx2 > indx1, then idx2 is never referring to what idx1 referred to previously. Idx2 is always moving to a new element, and never trying to touch what idx1 already touched previously.
+
+
+# Lecture 11: Two Dimensional Arrays
+
+Previously, we've been using arrays and storing multiple data types inside an array. But instead of storing simple elements, we can store whatever type of data we want to in an array.
+
+### Interesting observation: `puts` vs. `print`
+
+Let's say we have an array:
+
+        arr = [
+            ["a", "b", "c"],
+            ["d", "e"],
+            ["f", "g", "h"]
+        ]
+
+| `puts arr` | `print arr` |
+|:---|:---:|
+| Prints out vertical output | Prints out in array structure horizontally | 
+| a | [["a", "b", "c"], ["d", "e"], ["f", "g", "h"]] |
+| b
+c
+d
+e
+f
+g
+h |
+
+
+### What if we filled an array with arrays?
+
+
+
+
+
 
 
 # Exercises
