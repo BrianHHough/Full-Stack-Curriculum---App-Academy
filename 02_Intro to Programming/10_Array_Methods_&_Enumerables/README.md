@@ -420,6 +420,100 @@ Each line represents one iteration of this nested loop. There are 15 outputs (li
 
 # Lecture 10: Nested Loops Lecture II
 
+Review, let's hit every element in an array with `.each` and a `do` block:
+
+        arr = ["a", "b", "c", "d"]
+
+        arr.each do |ele|
+            puts ele
+        end 
+
+This outputs to a,b,c,d (vertically)
+
+So let's put a nested loop in here. We basically used distinct parameters here `ele1` and `ele2`. We wrote the same each twice, just gave them different parameter names, but one is fully contained in the other.
+
+We are doing some string concatenation, looking at a pair of elements. Below we iterate through all possible pairs WITH duplicates:
+
+        arr.each do |ele1|
+            arr.each do |ele2|
+                puts ele1 + ele2
+            end 
+        end
+
+On every iteration, `ele2` will change. Basically, ele1 becomes "a" and we're holding onto ele1, and ele2 is going to iterate through from a-b-c-d, once we exhaust all of our ele2's, then we get to iterate through ele1. There are 16 iterations (lines) for each pair...we printed out all possible pairs. This outputs to:
+
+        aa
+        ab
+        ac
+        ad
+        ba
+        bb
+        bc
+        bd
+        ca
+        cb
+        ........
+        dd
+        
+BUT....what if we only want to iterate through only unique pairs (no duplicates like ab and ba)?
+ 
+We don't want to grab the same element twice, because they come from the same array. If we want to have both of our each loops look at different elements, we need to track the `index`.
+
+We are going to use `_with_index` to track this. We'll also add `, idx1` and `, idx2`. However this sets index 1 and 2 to zero, so that's not right since we don't want to look at the same position of this array for ele1 and ele2. To fix this, we want to make sure we're looking at different indices at any point in time (and not print out ele1 and ele2 at different iterations), only on particular iterations. We'll add in a conditional `if` statement to cross-check our results.
+
+This if statement comes in handy b/c now we'll only print out the statements if the index of ele1 is greater than ele2. In the beginning both of our each's will start at index 0, but this if statement, it will check if 0 > 0. This is false, so don't print out that pair. The next iteration, `idx2` only changes, so comparing 0 and 1 (if 1 > 0)...which is true, so you print out that pair.
+
+        arr.each_with_index do |ele1, idx1| # index1 is zero. 
+            arr.each_with_index do |ele2, idx2| #index2 is also zero.
+                if idx2 > idx1
+                    puts ele1 + ele2
+                end
+            end 
+        end 
+
+The output evaluates to the below, with a lot less iterations, and each pair is unique:
+
+        ab
+        ac
+        ad
+        bc
+        bd
+        cd
+
+
+To print out the elements with their indices, use the below, and make sure to turn each index into a string that you can print: 
+
+        arr.each_with_index do |ele1, idx1| # index1 is zero. 
+            arr.each_with_index do |ele2, idx2| #index2 is also zero.
+                if idx2 > idx1
+                    puts ele1 + ele2
+                    puts idx1.to_s + "  " + idx2.to_s # need to convert the indices to strings
+                    puts "----------" # at the end of each iteration, put in dashes to separate them visually
+                end
+            end 
+        end 
+
+This outputs to: 
+
+        ab
+        0  1
+        ----------
+        ac
+        0  2
+        ----------
+        ad
+        0  3
+        ----------
+        bc
+        1  2
+        ----------
+        bd
+        1  3
+        ----------
+        cd
+        2  3
+        ----------
+
 
 
 # Exercises
