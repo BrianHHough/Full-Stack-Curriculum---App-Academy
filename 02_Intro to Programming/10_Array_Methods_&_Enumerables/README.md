@@ -550,10 +550,21 @@ h |
 
 ### What if we filled an array with arrays?
 
+Subarrays -- let's index after already indexing:
 
+        arr = [
+            ["a", "b", "c"],
+            ["d", "e"],
+            ["f", "g", "h"],
+        ]
 
+        subArr = arr[1]
+        print subArr[1]
+        puts
 
+We've made subarray index[1] of array's index[1], so index[1] of `["d", "e"]`....which becomes just `"e"`.
 
+But...a better way to do this 
 
 
 # Exercises
