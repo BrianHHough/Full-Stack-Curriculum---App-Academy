@@ -355,11 +355,40 @@ OR
 
 # Lecture 9: Nested Loops Lecture I
 
-Previously, we learned how to write loops as `while loops` or use the `each method` (aka enumerables). 
+Previously, we learned how to write loops as `while loops` or use the `each method` (aka enumerables). But what we haven't done yet is put a loop inside the body of the loop.
 
+## Putting a loop inside of a loop: counting 1-5 each time you count up from 1-3:
 
+        (1..3).each do |num1|
+            puts num1
 
+            (1..5).each do |num2| #distinction of outer number and inner number
+                puts "    " + num2.to_s # catonating these two strings
+            end # inner loop fully contained in body of outer loop
+        end
 
+The output of this is - notice the catonizing part of `num2<b>.to_s</b>` which catonizes these two strings:
+
+        1
+            1
+            2
+            3
+            4
+            5
+        2
+            1
+            2
+            3
+            4
+            5
+        3
+            1
+            2
+            3
+            4
+            5
+    
+## Instead of printing out the number
 
 
 # Exercises
