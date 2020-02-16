@@ -367,7 +367,7 @@ Previously, we learned how to write loops as `while loops` or use the `each meth
             end # inner loop fully contained in body of outer loop
         end
 
-The output of this is - notice the catonizing part of `num2<b>.to_s</b>` which catonizes these two strings:
+The output of this is - notice the catonizing part of `num2<b>.to_s</b>` which catonizes these two strings. Repeat the entire innerloop, three different times:
 
         1
             1
@@ -388,7 +388,38 @@ The output of this is - notice the catonizing part of `num2<b>.to_s</b>` which c
             4
             5
     
-## Instead of printing out the number
+## Instead of printing out the number over here, let's put it inside of the inner loop so that you see each iteration on a single line:
+
+Really just changing the location of where you put the 1:
+
+        (1..3).each do |num1|
+            (1..5).each do |num2|
+            puts num1.to_s + "  " + num2.to_s
+            end
+        end
+
+Output of that is. Different looking output, but expresses same pattern. Every left number refers to num1, every left number refers to num2 (num2 changes from one iteration to the next). After we go through all of our num2's, we then get to switch up our num1's through this pattern (really just hitting pairs of numbers):
+
+        1  1
+        1  2
+        1  3
+        1  4
+        1  5
+        2  1
+        2  2
+        2  3
+        2  4
+        2  5
+        3  1
+        3  2
+        3  3
+        3  4
+        3  5
+
+Each line represents one iteration of this nested loop. There are 15 outputs (lines of output code), which makes sense since the outer loop iterates 3 times, and the inner loop iterates 5 times (3 x 5 for the total number of iterations).
+
+# Lecture 10: Nested Loops Lecture II
+
 
 
 # Exercises
