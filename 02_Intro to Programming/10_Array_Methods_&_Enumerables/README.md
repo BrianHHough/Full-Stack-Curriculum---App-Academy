@@ -617,23 +617,26 @@ Everytime we print out the subarray (which belongs to our outer loop), we'll sta
 Need to get the first character of their name --> split on the space
 
         def to_initials(name)
-            parts = name.split(" ") # cuts where the space is
-            initials = "" # want to return some string data
-            parts.each { |part| initials += part[0] } # go in and grab the first position of each part; concatonate some initials with string[index 0]
+            parts = name.split(" ")     # cuts where the space is
+            initials = ""               # want to return some string data
+            parts.each { |part| initials += part[0] }           # go in and grab the first position of each part; concantenate some initials with string[index 0]
             return initials
         end
 
-        puts to_initials('Kelvin Bridges')
-        puts to_initials('Michaela Yamamoto')
+        puts to_initials("Kelvin Bridges")      # => "KB"
+        puts to_initials("Michaela Yamamoto")   # => "MY"
+        puts to_initials("Mary La Grange")      # => "MLG"
 
 
 ### Write a method `first_in_array` that takes in an array and two elements, the method should return the element that appears earlier in the array.
 
-        def first_in_array(arr, el1, el2)
-            if arr.index(el1) < arr.index(el2) # if el1 comes first, return el1
-                return el1
+Basically, you want to locate the index of both elements and compare them numerically. The `if statement` is a boolean, so when it returns false, it will run the `else`. You'd never have a case where the index of ele1 = ele2 (i.e. there's a tie), unless we pass in the same element twice, but we don't have to worry about that here.
+
+        def first_in_array(arr, el1, el2)               # take in array and two elements
+            if arr.index(el1) < arr.index(el2)          # if el1 comes first/before ele2, return el1
+                return el1                              # if so, return ele1
             else
-                return el2
+                return el2                              # if not, return ele2
             end 
         end 
 
