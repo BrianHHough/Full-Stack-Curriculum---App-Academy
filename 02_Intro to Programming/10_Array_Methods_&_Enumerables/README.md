@@ -612,7 +612,7 @@ Everytime we print out the subarray (which belongs to our outer loop), we'll sta
 
 # Exercises
 
-### Write a method `to_initials` that takes in a person's name string and returns a string representing their initials.
+## TO INITIALS: Write a method `to_initials` that takes in a person's name string and returns a string representing their initials.
 
 Need to get the first character of their name --> split on the space
 
@@ -628,7 +628,7 @@ Need to get the first character of their name --> split on the space
         puts to_initials("Mary La Grange")      # => "MLG"
 
 
-### Write a method `first_in_array` that takes in an array and two elements, the method should return the element that appears earlier in the array.
+## FIRST IN ARRAY: Write a method `first_in_array` that takes in an array and two elements, the method should return the element that appears earlier in the array.
 
 Basically, you want to locate the index of both elements and compare them numerically. The `if statement` is a boolean, so when it returns false, it will run the `else`. You'd never have a case where the index of ele1 = ele2 (i.e. there's a tie), unless we pass in the same element twice, but we don't have to worry about that here.
 
@@ -643,7 +643,92 @@ Basically, you want to locate the index of both elements and compare them numeri
         puts first_in_array(["a", "b", "c", "d"], "d", "b"); # => "b"
         puts first_in_array(["cat", "bird" ,"dog", "mouse" ], "dog", "mouse"); # => "dog"
 
+## ABBREVIATE SENTENCE: Write a method `abbreviate_sentence` that takes in a sentence string and returns a new sentence where every word longer than 4 characters has all of it's vowels removed.
 
+We modify the words that are >4 characters by removing their vowels. We may want to decompose it and hit every element. First, let's split the sentence b/c we recognize that a space (" ") separates one word from the next. For example, if we want to print out each word and see what that looks like, use this code (which will output an array of each word:
+
+        def abbreviate_sentence(sent)
+            words = sent.split(" ")     # split method spits you back an array (of words, which we'll call 'words')
+            print words
+            puts
+
+
+        end
+
+Now, we can iterate over each word, with `.each`. IF the new word is greater than 4 characters, then appreviate it.
+
+The trick here is to abbreviate the sentence in part 1 and then abbreviate the words in part 2:
+
+def abbreviate_sentence(sent)
+    words = sent.split(" ")     # split method spits you back an array (of words, which we'll call 'words')
+    new_words = [] # need a place to store all of the new variables, whether they have vowels or not
+    words.each do |word| # we're going to iterate through each word in the array
+        if word.length > 4
+            new_word = abbreviate_word(word) # this helper function is vital; new variables to pass through
+            new_words << new_word # want to SHOVEL this into the new array by adding it to the end
+        else 
+            new_words << word
+        end 
+    end 
+    new_sent = new_words.join(" ") # specify a space to leave in between
+end
+
+### Need a method that takes in a single word as a string and removes vowels from that string
+
+        def abbreviate_word(word) # this function takes in a signel word, while the first function takes in a whole sentence // how to decompose this problem
+            vowels = "aeiou"
+            no_vowels = ""
+
+            word.each_char do |char|
+                if !vowels.include?(char) # is char 'Not' a vowel, b/c of the boolean expression
+                    no_vowels += char
+                end
+            end
+            return no_vowels
+
+        end
+
+        puts abbreviate_sentence("follow the yellow brick road") # => "fllw the yllw brck road"
+        puts abbreviate_sentence("what a wonderful life")        # => "what a wndrfl life"
+
+This outputs to:
+
+        fllw the yllw brck road
+        what a wndrfl life
+
+## FORMAT NAME: Write a method `format_name` that takes in a name string and returns the name properly capitalized.
+
+For every word, the first character is capitalized and subsequent letters are not. We'll need to first split the string into its parts. 
+
+Note: you can only use `.split(" ")` on a string, and `.join(" ")` on an array.
+
+Note: use str.upcase and str.downcase. abc.upcase # => "ABC"
+
+        def format_name(str)
+            parts = str.split(" ") # A space separates each word
+            new_parts = []
+
+            parts.each do |part| # Iterate over each part using .each. Note: each part is a single element from the array, which is a string.
+
+                # We need to target the first element of the string.
+                new_parts << part[0].upcase + part[1..-1].downcase
+                # give you upper case version of index 0. + concatenation
+                # when you slice a string, you use square brackets, but you don't put a single number. You'll use a range and go all the way to the end, which is index -1 (note: -2 is the second to last element of a string)
+            end
+
+            return new_name = new_parts.join(" ") # first we split on a space, now we join on a space
+        end 
+
+        puts format_name("chase WILSON") # => "Chase Wilson"
+        puts format_name("brian CrAwFoRd scoTT") # => "Brian Crawford Scott"
+
+This returns:
+
+        Chase Wilson
+        Brian Crawford Scott
+
+
+## IS VALID NAME: Write a method `is_valid_name` that takes in a string and returns a boolean indicating whether or not it is a valid name.
 
 
 
