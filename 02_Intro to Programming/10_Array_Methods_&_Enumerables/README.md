@@ -564,7 +564,50 @@ Subarrays -- let's index after already indexing:
 
 We've made subarray index[1] of array's index[1], so index[1] of `["d", "e"]`....which becomes just `"e"`.
 
-But...a better way to do this 
+But...a better way to do this, just do `arr[1][1]`
+
+
+        arr = [
+            ["a", "b", "c"],
+            ["d", "e"],
+            ["f", "g", "h"],
+        ]
+        print arr[1][1]
+        puts
+
+
+This will output: `e`
+
+
+To iterate through a 2D array, see the below. We'll print out the subarray before we run the inner loop:
+
+        arr = [
+            ["a", "b", "c"],
+            ["d", "e"],
+            ["f", "g", "h"],
+        ]
+        
+        arr.each do |subArr|
+            print subArr
+            puts
+            subArr.each do |ele| # NEST THE LOOP
+                puts ele # INNER LOOP
+            end
+        end 
+
+Everytime we print out the subarray (which belongs to our outer loop), we'll start our inner loop and literally iterate through each element of that subarray. This will print out:
+
+        ["a", "b", "c"]
+        a
+        b
+        c
+        ["d", "e"]
+        d
+        e
+        ["f", "g", "h"]
+        f
+        g
+        h
 
 
 # Exercises
