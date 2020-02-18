@@ -858,7 +858,9 @@ The output code is:
 ## Reverse Words: Write a method `reverse_words` that takes in a sentence string and returns the sentence with the order of the characters in each word reversed. Note that we need to reverse the order of characters in the words, do not reverse the order of words in the sentence.
 
 Tools we can use to attack this problem:
-- need a way to isolate the words: need to pass over every word
+- need a way to isolate the words
+- need to pass over every word
+
 
         def reverse_words(sent)
             words = sent.split(" ") # choosing to split on the space so can isolate each word into a separate element of an array 
@@ -903,5 +905,15 @@ This code outputs to:
 
         ["Matthias", "Matt", "Danny", "Mashu"]
         ["c", "d", "a", "b"]
+
+
+
+## Pig Latin Word: Write a method pig_latin_word that takes in a word string and translates the word into pig latin.
+
+Pig latin translation uses the following rules. Two separate scenarios:
+- for words that start with a vowel, add 'yay' to the end
+- for words that start with a nonvowel, move all letters before the first vowel to the end of the word and add 'ay'
+
+
 
 
