@@ -777,7 +777,52 @@ Output is:
 
 ## IS VALID EMAIL: Write a method `is_valid_email` that takes in a string and returns a boolean indicating whether or not it is a valid email address.
 
+At the beginning, we'll split our string on an @ symbol to get everything to the left of the @ and everything to the right of the @. If we only have one @ symbol in our string, then we should have a length of 2 in that parts array. If we don't have a length of 2, we'll return false.
 
+Beyond that, we'll need to confirm the left side of the string contains alphanumeric characters. We'll iterate through each character, and if we find one that isn't, then we return false.
+
+Then we verify the right hand side to see if it contains exactly one dot. If we split the right hand side of the dot, we should get an array of length 2. Or else, we return false.
+
+The code we want to use here is:
+
+        def is_valid_email(str)
+        # CRITERIA 1: @ symbol
+            parts = str.split("@") # get you an array of parts, before and after the @ symbol
+
+            if parts.length != 2 # if output isn't two parts...
+                return false # then return false (check for 3+ parts)
+            end
+
+        # CRITERIA 2: only lowercase alphanumeric letters used - need to reference the alphabet
+
+            left = parts[0]
+            right = parts[1]
+            alpha = "abcdefghijklmnopqrstuvwxyz"
+
+            left.each_char do |char|
+                if !alpha.include?(char) # if char not in alphabet
+                    return false
+                end
+            end
+
+            if right.split(".").length == 2 # if there's exactly one dot, we should have an array of two
+                return true # if array has length 2, return true, b/c means there are two parts
+            else 
+                return false
+            end
+
+        end
+
+This outputs to:
+
+        true
+        true
+        false
+        false
+        false
+        false
+
+## ARRAY TRANSLATE: Write a method array_translate that takes in an array whose elements alternate between words and numbers. The method should return a string where each word is repeated the number of times that immediately follows in the array.
 
 
 
