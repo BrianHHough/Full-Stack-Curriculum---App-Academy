@@ -824,5 +824,84 @@ This outputs to:
 
 ## ARRAY TRANSLATE: Write a method array_translate that takes in an array whose elements alternate between words and numbers. The method should return a string where each word is repeated the number of times that immediately follows in the array.
 
+Want to look at two adjacent elements at a time. Have to grab two elements at a time but make sure they don't overlap between pairs:
+
+        def array_translate(array)
+            new_str = ""
+
+            i = 0
+            while i < array.length
+                ele = array[i]
+                num = array[i + 1] # i is always an index (position) and next position is i + 1: for example, i = cat, 1 = 2
+                new_str += ele * num
+
+                # num.times { new_str += ele } # want to take ele and concatenate it to the new string
+
+                i += 2 # want to jump by 2
+            end
+
+            return new_str
+        end
+
+        print array_translate(["Cat", 2, "Dog", 3, "Mouse", 1]); # => "CatCatDogDogDogMouse"
+        puts
+
+        print array_translate(["red", 3, "blue", 1]); # => "redredredblue"
+        puts
+
+The output code is:
+
+        CatCatDogDogDogMouse
+        redredredblue
+
+
+## Reverse Words: Write a method `reverse_words` that takes in a sentence string and returns the sentence with the order of the characters in each word reversed. Note that we need to reverse the order of characters in the words, do not reverse the order of words in the sentence.
+
+Tools we can use to attack this problem:
+- need a way to isolate the words: need to pass over every word
+
+        def reverse_words(sent)
+            words = sent.split(" ") # choosing to split on the space so can isolate each word into a separate element of an array 
+
+            # need to store these words somewhere
+            new_words = []
+
+            # now want to reverse each element of the array, so use an iterable:
+            words.each { |word| new_words << word.reverse} # String reverse method + shovel method to join reversed words together w/ the below:
+            new_sent = new_words.join(" ") # to join words together to get back final new sentence
+            return new_sent
+
+        end
+
+        puts reverse_words('keep coding') # => 'peek gnidoc'
+        puts reverse_words('simplicity is prerequisite for reliability') # => 'yticilpmis si etisiuqererp rof ytilibailer'
+
+
+This outputs to:
+
+        peek gnidoc
+        yticilpmis si etisiuqererp rof ytilibailer
+
+
+## Rotate Array: Write a method rotate_array that takes in an array and a number. The method should return the array after rotating the elements the specified number of times. A single rotation takes the last element of the array and moves it to the front.
+
+        def rotate_array(arr, num)
+            num.times do # enumerables in ruby // returning whatever the number was
+                ele = arr.pop # use pop - it removes last element of array and also returns it
+                arr.unshift(ele)
+            end
+                return arr # now need to return the original array
+        end
+
+        print rotate_array([ "Matt", "Danny", "Mashu", "Matthias" ], 1) # => [ "Matthias", "Matt", "Danny", "Mashu" ]
+        puts
+
+        print rotate_array([ "a", "b", "c", "d" ], 2) # => [ "c", "d", "a", "b" ]
+        puts
+
+This code outputs to:
+
+        ["Matthias", "Matt", "Danny", "Mashu"]
+        ["c", "d", "a", "b"]
 
 
