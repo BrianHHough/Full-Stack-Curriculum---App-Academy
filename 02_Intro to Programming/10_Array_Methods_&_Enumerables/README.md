@@ -982,4 +982,67 @@ To get rid of duplicate pairs, need to make sure inner loop isn't checking what 
 
 ## Opposite Count: Write a method `opposite_count` that takes in an array of unique numbers. The method should return the number of pairs of elements that sum to 0.
 
+        def opposite_count(nums)
+            count = 0
+
+            nums.each_with_index do |num1, idx1| # nested loop
+                # need an inner loop to iterate through all of the potential pairs
+                nums.each_with_index do |num2, idx2|
+                    if num1 + num2 == 0 && idx2 > idx1 # single loop; both sides must be true here
+                        count += 1
+                    # puts num1.to_s + " " + num2.to_s
+                    end
+                end
+            end
+
+            return count 
+        end
+
+        puts opposite_count([ 2, 5, 11, -5, -2, 7 ]) # => 2
+        puts opposite_count([ 21, -23, 24 -12, 23 ]) # => 1
+
+
+The output is: 
+
+        2
+        1
+
+
+## Two D Sum: Write a method two_d_Sum that takes in a two dimensional array and returns the sum of all elements in the array.
+
+You get a 2D array, add up all the inner numbers
+
+        def two_d_sum(arr)
+            sum = 0
+
+            # need to iterate through array
+            arr.each do |subArr|
+                subArr.each do |num| # need to iteratre through that array
+                    sum += num
+                end
+            end 
+
+            return sum
+
+        end
+
+        array_1 = [
+          [4, 5],
+          [1, 3, 7, 1]
+        ]
+        puts two_d_sum(array_1)    # => 21
+
+        array_2 = [
+          [3, 3],
+          [2],
+          [2, 5]
+        ]
+        puts two_d_sum(array_2)    # => 15
+
+Output is:
+
+        21
+        15
+
+
 
