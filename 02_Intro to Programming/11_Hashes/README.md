@@ -30,4 +30,111 @@ Notice how you the output is now the full list but `pink` and `6` and not red an
     my_hash["age"] += 1
     puts my_hash
     
-    
+   
+Lecture 2 -- More Hashes
+
+In arrays, `.length` tells you the number of elements in an array BUT with hashes, `.length` tells you the number of pairs in the hash.
+
+
+The output of this is `5` because there are 5 pairs in this hash:
+
+    dog = {
+        "name" => "Fido",
+        "color" => "black",
+        "age" => 3,
+        "isHungry" => true,
+        "enemies" => ["squirrel"]
+    }
+
+    puts dog.length
+
+### You can add info after the fact
+You can manipulate the hash by adding info below, this will add a new key pair and add the info to the other pairs:
+
+    dog = {
+        "name" => "Fido",
+        "color" => "black",
+        "age" => 3,
+        "isHungry" => true,
+        "enemies" => ["squirrel"]
+    }
+
+    dog["location"] = "NY"
+    puts dog
+
+you can shovel new info in, which outputs two sets of arrays in the below.
+
+    dog = {
+        "name" => "Fido",
+        "color" => "black",
+        "age" => 3,
+        "isHungry" => true,
+        "enemies" => ["squirrel"]
+    }
+
+    print dog["enemies"] << "mailman"
+    puts
+    puts dog
+
+......This outputs to:
+
+    ["squirrel", "mailman"]
+    {"name"=>"Fido", "color"=>"black", "age"=>3, "isHungry"=>true, "enemies"=>["squirrel", "mailman"]}
+
+
+### to check if a key exists within a hash
+Use `.hash_key?()` which is a boolean
+
+This evaluates as `true` while if you use .has_keys? for "location", that would evaluate as `false` because there's no key pair about location.
+
+    dog = {
+        "name" => "Fido",
+        "color" => "black",
+        "age" => 3,
+        "isHungry" => true,
+        "enemies" => ["squirrel"]
+    }
+
+    print dog.has_key?("age")
+
+### if you want an array of every key: `.keys`
+
+This outputs to everything to the left of the rockets `["name", "color", "age", "isHungry", "enemies"]`
+
+    dog = {
+        "name" => "Fido",
+        "color" => "black",
+        "age" => 3,
+        "isHungry" => true,
+        "enemies" => ["squirrel"]
+    }
+
+    print dog.keys
+
+Since it's an array, we can index into it, and look at the position 1 of the hash dog, only looking at the key pairs' left part. This would evaluate to `color`:
+
+    dog = {
+        "name" => "Fido",
+        "color" => "black",
+        "age" => 3,
+        "isHungry" => true,
+        "enemies" => ["squirrel"]
+    }
+
+    print dog.keys[1]
+
+### if you want an array of every value: `.values`
+
+This outputs to everything to the right of the rockets. This will output: `["Fido", "black", 3, true, ["squirrel"]]`:
+
+    dog = {
+        "name" => "Fido",
+        "color" => "black",
+        "age" => 3,
+        "isHungry" => true,
+        "enemies" => ["squirrel"]
+    }
+
+    print dog.values
+
+
