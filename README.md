@@ -34,6 +34,9 @@ Coursework Completed by: `@BrianHHough` 👨‍💻 [Website](https://BrianHHoug
 
 [#10: Array Methods & Enumerables](https://github.com/BrianHHough/Full-Stack-Curriculum---App-Academy/tree/master/02_Intro%20to%20Programming/10_Array_Methods_%26_Enumerables)
 
+[#11: Hashes](https://github.com/BrianHHough/Full-Stack-Curriculum---App-Academy/tree/master/02_Intro%20to%20Programming/11_Hashes)
+
+
 
 
 ## Part 3: Ruby
