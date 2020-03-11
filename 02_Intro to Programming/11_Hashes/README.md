@@ -138,3 +138,72 @@ This outputs to everything to the right of the rockets. This will output: `["Fid
     print dog.values
 
 
+# Lecture 3: Why Hashes?
+
+Arrays: a collection of similar things (i.e. a single animal)
+Hash: multiple elements of the same thing
+
+Good array data: `animals = ["dog", "cat", "fish", "bird"]`
+Not so good array data: `person = ["Alvin", 100, "New York", "burgers", true]`
+
+The second is better as a hash like this:
+
+    better_person = {
+        "name"=>"Alvin",
+        "age"=>100,
+        "location"=>"New York",
+        "favoriteFood"=>"burgers",
+        "isHungry"=>true
+    }
+    puts better_person['location']
+
+
+# Lecture 4: Iterating_Hashes
+
+Ways to iterate through hashes with enumerables
+
+Example code: 
+
+    pizza = {
+        "style"=>"New York",
+        "slices"=>8,
+        "diameter"=>"15 inches",
+        "toppings"=>["Mushrooms", "green peppers"],
+        "is_tasty"=>true
+    }
+
+### `.each` 
+passes into the block the key and the value
+
+Output: each iteration, separated by a dash
+
+    pizza.each do |k, v|
+        puts k
+        puts v
+        puts "------"
+    end 
+
+For example:
+
+    style
+    New York
+    ------
+    slices
+    8
+    ------
+    ...
+
+### `.each_key`
+Just iterates over the keys into the block (aka everything on the left)
+
+    pizza.each_key do |k|
+        puts k
+    end
+
+
+### `.each_values`
+Just iterates over the values into the block (aka everything on the right)
+
+    pizza.each_value do |val|
+        puts val
+    end
